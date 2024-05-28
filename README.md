@@ -1,4 +1,7 @@
 # KG的題目練習紀錄
 * Leetcode
 * CPE
-* ~屁話真多還不打code~
+### Leetcode
+邏輯、演算法
+### CPE
+文字處理、輸入輸出處裡
