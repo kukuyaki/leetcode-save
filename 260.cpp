@@ -5,11 +5,11 @@ public:
         for(int i=0;i<size(nums);i++){
             k^=nums[i];
         }
-        k=k & (-k);
+        unsigned int p=k & -(unsigned int)k;
         vector<int> w(2,0);
 
         for(int i=0;i<size(nums);i++){
-            if (k & nums[i]){
+            if (p & nums[i]){
                 w[0]^=nums[i];
             }
             else{
