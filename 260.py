@@ -1,10 +1,17 @@
 class Solution(object):
     def singleNumber(self, nums):
-        k=[]
-        for i in range(len(nums)):
-            if nums[i] not in nums[:i]+nums[i+1:]:
-                k.append(nums[i])
-        return k
+        k=0
+        w=[0,0]
+        for i in nums:
+            k^=i
+        k=k & -k
+        for i in nums:
+            if (i & k)==0:
+                w[0]^=i
+            else:
+                w[1]^=i
+        return w
+        
                 
 
 
